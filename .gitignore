@@ -1,0 +1,11 @@
+# runtime and cache directories
+/protected/runtime
+/assets
+
+# composer
+/protected/vendor
+composer.lock
+
+# bower
+/src/vendor
+

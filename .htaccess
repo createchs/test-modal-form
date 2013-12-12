@@ -1,0 +1,27 @@
+Options -Indexes
+
+AddDefaultCharset utf-8
+
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymlinks
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . index.php
+</IfModule>
+
+
+
+<IfModule mod_php5.c>
+    #php_value max_execution_time 0
+    #php_value upload_max_filesize 60M
+    #php_value post_max_size 60M
+    #php_value error_reporting -1
+    #php_flag log_errors On
+    #php_flag display_errors On
+    #php_flag display_startup_errors Off
+</IfModule>
+
